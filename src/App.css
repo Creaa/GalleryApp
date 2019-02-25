@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  background: #fc354c;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #fc354c 1%, #2989d8 45%, #207cca 89%, #207cca 89%, #0abfbc 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #fc354c 1%, #2989d8 45%, #207cca 89%, #207cca 89%, #0abfbc 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #fc354c 1%, #2989d8 45%, #207cca 89%, #207cca 89%, #0abfbc 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fc354c', endColorstr='#0abfbc', GradientType=1);
+  /* IE6-9 */
+}
+
+.first-column,
+.second-column {
+  width: 50%;
+}
+
+.wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+
+/* First Column Section */
+
+.gallery-title {
+  transform: rotateY(180deg);
+  text-align: center;
+  /* no info about axis of rotation.*/
+}
+
+
+.gallery-list {
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  list-style: none;
+}
+
+.gallery-element {
+  width: min-content;
+  max-width: 100%;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+
+.gallery-link {
+  display: block;
+  width: 10vw;
+  height: 10vw;
+  flex-shrink: 1;
+  padding: 50px;
+  transition: 1s;
+}
+
+.gallery-link:hover {
+  transform: scale(1.1);
+}
+
+.photo-title {
+  font-weight: 700;
+  font-style: italic;
+  font-size: 0.9rem;
+  padding-top: 5px;
+  word-wrap: break-all;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Second Column Section */
+
+.second-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-photo {
+  transition: 2s;
+  width: calc(60pt * 2);
+  height: calc(60pt * 2);
+  border-radius: 50%;
+}
+
+.view-photo:hover {
+  width: auto;
+  height: auto;
+  border-radius: 0;
+}
+
+/* Utilities, media-query and Animations */
+
+
+@media only screen and (max-width: 800pt) {
+  .wrapper {
+    overflow: hidden;
+    flex-direction: column;
+  }
+
+  .first-column,
+  .second-column {
+    padding: 20px 0;
+    width: 100%;
+  }
+}
+
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes FadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
